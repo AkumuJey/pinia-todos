@@ -53,12 +53,18 @@ header h1 {
   .todo .icons {
     text-align: right;
   }
+
   .todo i {
     font-size: 1.4em;
     margin-left: 6px;
     cursor: pointer;
     color: #bbb;
   }
+
+  .todo i.active {
+    color: red;
+  }
+
   h2{
     text-align: center;
   }
@@ -83,4 +89,33 @@ header h1 {
     font-size: 1em;
   }
 
+
+  /* new task form */
+.new-todo-form {
+  background: #e7e7e7;
+  padding: 20px 0;
+}
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+}
+form button {
+  background: #ffd859;
+  border: 0;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+}
+form input {
+  border: 0;
+  padding: 10px;
+  border-radius: 6px;
+  color: #555;
+  font-size: 1em;
+}
 
