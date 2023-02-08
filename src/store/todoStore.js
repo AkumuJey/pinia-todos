@@ -3,11 +3,8 @@ import { defineStore } from "pinia";
 export const useTodosStore = defineStore('todosStore', {
     state: () => (
         {
-            todos : [
-                {id: 1, title: "read for my exams", isFav: false},
-                {id: 2, title: "see my girl", isFav: true},
-                {id: 3, title: "watch manchester united win", isFav: true}
-            ]
+            todos : [],
+            isLoading: false
         }
     ),
     getters: {
@@ -24,6 +21,13 @@ export const useTodosStore = defineStore('todosStore', {
         }
     },
     actions: {
+        async getTodos() {
+            this.isLoading = true
+            const res = await fetch('http://localhost:3000/todos')
+            const data = await res.json()
+            this.todos = data
+            this.isLoading = false
+        },
         addTodo(todo) {
             this.todos.push(todo)
         },

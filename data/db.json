@@ -1,0 +1,40 @@
+{
+    "todos": [
+      {
+        "id": 1,
+        "title": "play golf",
+        "isFav": true
+      },
+      {
+        "id": 2,
+        "title": "visit grandma",
+        "isFav": false
+      },
+      {
+        "title": "attend bible study",
+        "isFav": true,
+        "id": 3
+      },
+      {
+        "title": "eat some fish",
+        "isFav": false,
+        "id": 4
+      },
+      {
+        
+        "title": "read for my exams",
+        "isFav": false,
+        "id": 5
+      },
+      {
+        "title": "see my girl",
+        "isFav": true,
+        "id": 6
+      },
+      {
+        "title": "watch manchester united win",
+        "isFav": true,
+        "id": 7
+      }
+    ]
+  }

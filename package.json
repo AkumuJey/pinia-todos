@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "g": "^2.0.1",
+    "json-server": "^0.17.1",
     "pinia": "^2.0.30",
     "vue": "^3.2.45"
   },
