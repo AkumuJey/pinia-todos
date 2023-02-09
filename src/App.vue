@@ -11,10 +11,12 @@
         <button @click="filter = 'all'">All todos</button>
         <button @click="filter = 'favs'">Favorite todos</button>
     </nav>
-    <div class="isLoading" v-if="isLoading">
-        <h1>Loading Todos</h1>
+    <div class="isLoading w-full h-screen text-slate-900 bg-blue-400 text-3xl" v-if="isLoading">
+        <div class="m-auto">
+            <h1 class="font-bold">Loading Todos....</h1>
+        </div>
     </div>
-    <div v-else>
+    <div v-else class="w-2/3 h-2/3 m-auto">
         <div v-if="filter === 'all'">
             <h2>You have {{ totalCount }} <span v-if="totalCount === 1">todo</span><span v-else>todos</span> pending</h2>
             <div v-for="todo in todos" :key="todo.id">
