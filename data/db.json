@@ -1,11 +1,6 @@
 {
   "todos": [
     {
-      "id": 2,
-      "title": "visit grandma",
-      "isFav": false
-    },
-    {
       "title": "attend bible study",
       "isFav": true,
       "id": 3
