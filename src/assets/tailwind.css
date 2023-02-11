@@ -3,3 +3,30 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-slate-100 m-0 decoration-black
+    }
+    header {
+        @apply text-center bg-slate-200 flex justify-center items-center p-5
+    }
+
+    header img {
+        @apply max-w-[60px] transform -rotate-[10deg]
+    }
+    header h1 {
+        @apply m-0 text-4xl pt-6 ml-4 transform rotate-[2deg] text-green-600 font-bold
+    }
+}
+
+
+@layer components {
+    .todo-list {
+        @apply max-w-2xl my-5 mx-auto bg-red-600
+    }
+    .todo {
+        @apply py-2 px-5 bg-white rounded-md mt-5
+    }
+
+}
