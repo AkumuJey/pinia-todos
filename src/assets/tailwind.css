@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
 @tailwind base;
 
 @tailwind components;
@@ -6,17 +8,20 @@
 
 @layer base {
     body {
-        @apply bg-slate-100 m-0 decoration-black
+        @apply bg-slate-100 m-0 decoration-black font-["Poppins"]
     }
     header {
         @apply text-center bg-slate-200 flex justify-center items-center p-5
     }
 
     header img {
-        @apply max-w-[60px] transform -rotate-[10deg]
+        @apply max-w-[60px] transform -rotate-[10deg] p-2
     }
     header h1 {
         @apply m-0 text-4xl pt-6 ml-4 transform rotate-[2deg] text-green-600 font-bold
+    }
+    h2 {
+       @apply text-center
     }
 }
 
@@ -26,7 +31,56 @@
         @apply max-w-2xl my-5 mx-auto bg-red-600
     }
     .todo {
-        @apply py-2 px-5 bg-white rounded-md mt-5
+        @apply py-2 px-5 bg-white rounded-md mt-5 flex justify-between items-center shadow-[2px_4px_6px_rgba(0,0,0,0.5)]
     }
 
+    .todo h3, .todo .icons {
+        @apply inline-block
+    }
+    .todo i {
+        @apply text-2xl ml-2 text-gray-400 cursor-pointer
+    }
+    .todo .icons {
+        @apply text-left
+    }
+    .todo i.active {
+        @apply text-red-500
+    }
+    /*
+  Filtering buttons and navbar styling*/
+/* filter nav */
+
+    .filter {
+        @apply w-2/3 my-3 text-right mx-auto
+    }
+    .filter button {
+        @apply inline-block ml-3 bg-blue-300 rounded py-1 px-2 cursor-pointer text-base border-solid border-2 border-gray-600
+    }
+ /* new task form */
+    .new-todo-form {
+        @apply py-5 bg-slate-200
+    }
+    form {
+        @apply max-w-[400px] mx-auto grid grid-cols-4 gap-3
+    }
+    form .todo-entry {
+        @apply col-span-3 p-3 rounded-md text-base text-gray-600
+    }
+    form .todo-submit {
+        @apply col-span-1 bg-yellow-400 p-3 cursor-pointer text-base rounded-md font-["Poppins"]
+    }
+/* Loading button */
+    .isLoading {
+        @apply text-center px-3 my-8 mx-auto 
+    }
+    .isLoading div {
+        @apply flex justify-center items-center
+    }
+    .isLoading div h1 {
+        @apply animate-spin font-bold text-9xl
+    }
+/* Resetting button */
+    .reset {
+        @apply bg-blue-800 block mx-auto py-1 px-2 my-5 rounded-md text-base font-["Poppins"]
+    }
 }

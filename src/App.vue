@@ -11,9 +11,9 @@
         <button @click="filter = 'all'">All todos</button>
         <button @click="filter = 'favs'">Favorite todos</button>
     </nav>
-    <div class="isLoading w-full h-screen text-slate-900 bg-blue-400 text-3xl" v-if="isLoading">
-        <div class="m-auto">
-            <h1 class="font-bold">Loading Todos....</h1>
+    <div class="isLoading w-full h-max text-slate-900 text-3xl" v-if="isLoading">
+        <div>
+            <h1 class="material-icons">sync</h1>
         </div>
     </div>
     <div v-else class="w-2/3 h-2/3 m-auto">
@@ -30,7 +30,7 @@
             </div>
         </div>
     </div>
-    <button @click="todosStore.$reset">Reset</button>
+    <button @click="todosStore.$reset" class="reset">Reset</button>
  </main>
 </template>
 <script setup>

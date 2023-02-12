@@ -3,8 +3,10 @@
     <input
         type="text"
         placeholder="I plan to..."
-        v-model="newTodo">
-        <button>Add</button>
+        v-model="newTodo"
+        class="todo-entry"
+    >
+     <button class="todo-submit">Add</button>
   </form>
 </template>
 
